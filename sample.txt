@@ -1,0 +1,19 @@
+finit
+
+fld QWORD PTR x
+fmul st, st(0)
+fld QWORD PTR y
+fmul st, st(0)
+faddp st(1),st(0)
+fsqrt;=radius
+
+fld QWORD PTR u
+fld QWORD PTR v
+fld st(1)
+fadd st(0), st(1)
+fmul st(0), st(3)
+fstp QWORD PTR u
+fsubp st(1), st(0)
+fmul st(0), st(1)
+fstp QWORD PTR v
+fstp

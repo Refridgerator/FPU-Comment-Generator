@@ -1,6 +1,5 @@
 # FPU Comment Generator
 Comment generator for FPU code.     
-Download compiled: [FpuCommentGenerator.exe](https://github.com/Refridgerator/FPU-Comment-Generator/raw/master/FpuCommentGenerator/bin/Release/FpuCommentGenerator.exe)
 
 ```Assembler
 finit;              0~||

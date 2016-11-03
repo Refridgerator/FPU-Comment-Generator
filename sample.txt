@@ -7,13 +7,13 @@ fmul st, st(0)
 faddp st(1),st(0)
 fsqrt;=radius
 
-fld QWORD PTR u
-fld QWORD PTR v
+fld QWORD PTR [esi];=u
+fld QWORD PTR [esi+8];=v
 fld st(1)
 fadd st(0), st(1)
 fmul st(0), st(3)
-fstp QWORD PTR u
+fstp QWORD PTR [esi]
 fsubp st(1), st(0)
 fmul st(0), st(1)
-fstp QWORD PTR v
+fstp QWORD PTR [esi+8]
 fstp

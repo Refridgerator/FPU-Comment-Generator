@@ -374,10 +374,9 @@ namespace FPU
 
             if(comment!="")
             {
-                if (rd == -1)
-                        this[0]=comment;
-                    else
-                    this[rd] = comment;
+                if (instr.EndsWith("p")) rd--;
+                if (rd < 0) rd=0;
+                this[rd] = comment;
             }
         }
 
@@ -395,6 +394,7 @@ namespace FPU
         {
             if (line == "") return "";
             if (line.StartsWith(";")) return "";
+            if (!line.StartsWith("f",StringComparison.CurrentCultureIgnoreCase)) return "";
 
             Match m = rx.Match(line.ToLower().Replace("qword","").Replace("ptr",""));
             if (!m.Success) return "#error#";            

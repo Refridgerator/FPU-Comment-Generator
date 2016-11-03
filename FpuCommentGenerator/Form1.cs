@@ -113,6 +113,7 @@ namespace FPU
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             filename = "";
+            UpdateTitle();
             rtf.Text = "";
             rtf2.Text = "";
             fpu.Init();

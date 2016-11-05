@@ -157,5 +157,11 @@ namespace FPU
                 UpdateTitle();
             }
         }
+
+        private void rtf_vScroll(Message msg)
+        {
+            msg.HWnd = rtf2.Handle;
+            rtf2.PubWndProc(ref msg);
+        }
     }
 }
